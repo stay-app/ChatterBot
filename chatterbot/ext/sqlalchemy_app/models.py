@@ -47,7 +47,6 @@ class Tag(Base):
         unique=True
     )
 
-nt
 class Statement(Base, StatementMixin):
     """
     A Statement represents a sentence or phrase.
