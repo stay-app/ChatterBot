@@ -47,7 +47,7 @@ class Tag(Base):
         unique=True
     )
 
-
+nt
 class Statement(Base, StatementMixin):
     """
     A Statement represents a sentence or phrase.
@@ -56,11 +56,11 @@ class Statement(Base, StatementMixin):
     confidence = 0
 
     text = Column(
-        String(constants.STATEMENT_TEXT_MAX_LENGTH)
+        String()
     )
 
     search_text = Column(
-        String(constants.STATEMENT_TEXT_MAX_LENGTH),
+        String(),
         nullable=False,
         server_default=''
     )
@@ -83,12 +83,12 @@ class Statement(Base, StatementMixin):
     )
 
     in_response_to = Column(
-        String(constants.STATEMENT_TEXT_MAX_LENGTH),
+        String(),
         nullable=True
     )
 
     search_in_response_to = Column(
-        String(constants.STATEMENT_TEXT_MAX_LENGTH),
+        String(),
         nullable=False,
         server_default=''
     )
